@@ -1,0 +1,87 @@
+.typeBadge {
+    border-radius: 10px;
+    padding: 3px;
+    width: 80px;
+    display: flex;
+    gap: 5px;
+    color: #fff;
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+}
+
+.typeBadge img {
+    width: 20px;
+}
+
+.typeBadge-bug {
+    background: #92BD2D;
+}
+
+.typeBadge-dark {
+    background: #595761;
+}
+
+.typeBadge-dragon {
+    background: #0C6AC8;
+}
+
+.typeBadge-electric {
+    background: #F2D94E;
+}
+
+.typeBadge-fairy {
+    background: #EF90E6;
+}
+
+.typeBadge-fighting {
+    background: #D3425F;
+}
+
+.typeBadge-fire {
+    background: #FBA64C;
+}
+
+.typeBadge-flying {
+    background: #A1BBEC;
+}
+
+.typeBadge-ghost {
+    background: #5F6DBC;
+}
+
+.typeBadge-grass {
+    background: #60BD58;
+}
+
+.typeBadge-ground {
+    background: #DA7C4D;
+}
+
+.typeBadge-ice {
+    background: #76D1C1;
+}
+
+.typeBadge-normal {
+    background: #A0A29F;
+}
+
+.typeBadge-poison {
+    background: #B763CF;
+}
+
+.typeBadge-psychic {
+    background: #FA8582;
+}
+
+.typeBadge-rock {
+    background: #C9BC8A;
+}
+
+.typeBadge-steel {
+    background: #5795A3;
+}
+
+.typeBadge-water {
+    background: #539DDF;
+}

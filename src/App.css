@@ -1,0 +1,162 @@
+#root {
+  width: 1920px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  border: 1rem solid salmon;
+  border-radius: 1rem;
+  background: #000000;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 2em;
+}
+
+article {
+  border: 1px solid #242424;
+  border-radius: 1rem;
+  background: #050B19;
+  padding: 1.5rem;
+  max-width: 250px;
+}
+
+article h2 {
+  font-weight: 500;
+}
+
+.alturaPeso {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.alturaPeso span {
+  line-height: 0.5;
+  font-weight: 500;
+}
+
+.alturaPeso h4 {
+  font-weight: 500;
+}
+
+.pokeType {
+  width: 100px;
+}
+
+.typesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+article img {
+  width: 150px;
+}
+
+.shinyButton {
+  padding: 0;
+  background:transparent;
+}
+
+.maleButton {
+  padding: 0;
+  background:blue;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.femaleButton {
+  padding: 0;
+  background: deeppink;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.spriteButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.genderContainer {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardType-bug {
+  background: linear-gradient(0deg, rgba(146, 189, 45, 1) 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-dark {
+  background: linear-gradient(0deg, #595761 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-dragon {
+  background: linear-gradient(0deg, #0C6AC8 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-electric {
+  background: linear-gradient(0deg, #F2D94E 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-fairy {
+  background: linear-gradient(0deg, #EF90E6 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-fighting {
+  background: linear-gradient(0deg, #D3425F 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-fire {
+  background: linear-gradient(0deg, #FBA64C 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-flying {
+  background: linear-gradient(0deg, #A1BBEC 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-ghost {
+  background: linear-gradient(0deg, #5F6DBC 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-grass {
+  background: linear-gradient(0deg, #60BD58 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-ground {
+  background: linear-gradient(0deg, #DA7C4D 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-ice {
+  background: linear-gradient(0deg, #76D1C1 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-normal {
+  background: linear-gradient(0deg, #A0A29F 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-poison {
+  background: linear-gradient(0deg, #B763CF 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-psychic {
+  background: linear-gradient(0deg, #FA8582 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-rock {
+  background: linear-gradient(0deg, #C9BC8A 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-steel {
+  background: linear-gradient(0deg, #5795A3 0%, rgba(5, 11, 25, 1) 55%);
+}
+
+.cardType-water {
+  background: linear-gradient(0deg, #539DDF 0%, rgba(5, 11, 25, 1) 55%);
+}
