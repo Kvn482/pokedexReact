@@ -11,10 +11,13 @@
   border-radius: 1rem;
   background: #000000;
   color: #fff;
+  padding: 2em;
+}
+
+.cardsWrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  padding: 2em;
 }
 
 article {
@@ -59,12 +62,12 @@ article img {
 
 .shinyButton {
   padding: 0;
-  background:transparent;
+  background: transparent;
 }
 
 .maleButton {
   padding: 0;
-  background:blue;
+  background: blue;
   border: 2px solid #fff;
   border-radius: 50%;
 }

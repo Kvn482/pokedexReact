@@ -8,34 +8,54 @@ function App() {
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon")
   const { data, loading, error } = useFetch(url)
   const [details, setDetails] = useState([])
+  const [buscar, setBuscar] = useState('')
 
-  // Cuando cambia la lista de Pokémon (results), cargamos sus detalles
   useEffect(() => {
-    if (!data?.results) return
 
-    // Consultamos cada URL en paralelo
-    Promise.all(
-      data.results.map((pokemon) =>
-        fetch(pokemon.url).then((res) => res.json())
-      )
-    ).then((allDetails) => {
-      setDetails(allDetails)
-    })
+    if (!data) return;
+
+    if (data.results) {
+      Promise.all(
+        data.results.map((pokemon) =>
+          fetch(pokemon.url).then((res) => res.json())
+        )
+      ).then((allDetails) => {
+        setDetails(allDetails);
+      });
+    } else {
+      setDetails([data]);
+    }
   }, [data])
+
+  const createHandleSearchPokemon = (pokemon) => (e) => {
+    e.preventDefault()
+    setUrl(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
+  }
 
   return (
     <>
-      <h1>CONSUMIR API POKEMON</h1>
+      <h1>POKEDEX</h1>
+      <form>
+        <input type="text" className='addProductInput' placeholder='Buscar...' value={buscar} onChange={(e) => setBuscar(e.target.value)} />
+        <button className='addProductBtn' onClick={createHandleSearchPokemon(buscar)}>Buscar</button>
+      </form>
 
       {loading && <h3>Cargando ...</h3>}
       {error && <h3>Error: {error}</h3>}
 
-      {console.log(details)}
-
       <section className='card'>
-        {details.map((pokemon) => (
-          <PokemonCard key={pokemon.id} pokemon={pokemon}/>
-        ))}
+        {data ? (
+          <div className='cardsWrapper'>
+            {
+              details.map((pokemon) => (
+                <PokemonCard key={pokemon.id} pokemon={pokemon} />
+              ))
+            }
+          </div>
+
+        ) : (
+          <h4>Todos tus pokemon quedaron debilitados. UnU</h4>
+        )}
       </section>
 
       <div style={{ marginTop: "20px" }}>

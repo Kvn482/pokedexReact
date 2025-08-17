@@ -12,15 +12,23 @@ export function useFetch(url) {
         const abortController = new AbortController()
         setController(abortController)
         setLoading(true)
+        setError(null)
 
         fetch(url, { signal: abortController.signal })
-            .then((response) => response.json())
+            .then((response) => {
+                
+                if (!response.ok) {
+                    throw new Error("Quien es ese pokemon?!")
+                }
+                return response.json()
+            })
             .then((data) => setData(data))
             .catch((error) => {
                 if (error.name === 'AbortError') {
                     console.log("Request cancelled")
                 } else {
-                    setError(error)
+                    setError(error.message)
+                    setData(null)
                 }
             })
             .finally(() => setLoading(false))
