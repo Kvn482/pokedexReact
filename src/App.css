@@ -6,6 +6,17 @@
   text-align: center;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header img {
+  width: 45px;
+}
+
 .card {
   border: 1rem solid salmon;
   border-radius: 1rem;
@@ -92,74 +103,43 @@ article img {
   align-items: center;
 }
 
-.cardType-bug {
-  background: linear-gradient(0deg, rgba(146, 189, 45, 1) 0%, rgba(5, 11, 25, 1) 55%);
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
 }
 
-.cardType-dark {
-  background: linear-gradient(0deg, #595761 0%, rgba(5, 11, 25, 1) 55%);
+.pokemon-types-filter-container {
+  display: flex;
+  background: #050B19;
+  padding: 9px;
+  border-radius: 0.7rem;
+  gap: 5px;
 }
 
-.cardType-dragon {
-  background: linear-gradient(0deg, #0C6AC8 0%, rgba(5, 11, 25, 1) 55%);
+.input-container form {
+  display: flex;
 }
 
-.cardType-electric {
-  background: linear-gradient(0deg, #F2D94E 0%, rgba(5, 11, 25, 1) 55%);
+.pokemon-search-input {
+  border: 0px solid transparent;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  width: 300px;
+  background: #050B19;
+  font-size: 13px;
+  color: #fff;
 }
 
-.cardType-fairy {
-  background: linear-gradient(0deg, #EF90E6 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-fighting {
-  background: linear-gradient(0deg, #D3425F 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-fire {
-  background: linear-gradient(0deg, #FBA64C 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-flying {
-  background: linear-gradient(0deg, #A1BBEC 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-ghost {
-  background: linear-gradient(0deg, #5F6DBC 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-grass {
-  background: linear-gradient(0deg, #60BD58 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-ground {
-  background: linear-gradient(0deg, #DA7C4D 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-ice {
-  background: linear-gradient(0deg, #76D1C1 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-normal {
-  background: linear-gradient(0deg, #A0A29F 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-poison {
-  background: linear-gradient(0deg, #B763CF 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-psychic {
-  background: linear-gradient(0deg, #FA8582 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-rock {
-  background: linear-gradient(0deg, #C9BC8A 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-steel {
-  background: linear-gradient(0deg, #5795A3 0%, rgba(5, 11, 25, 1) 55%);
-}
-
-.cardType-water {
-  background: linear-gradient(0deg, #539DDF 0%, rgba(5, 11, 25, 1) 55%);
+.pokemon-search-button {
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  width: 55px;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  background-color: rgb(107, 10, 197);
 }

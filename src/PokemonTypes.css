@@ -1,0 +1,31 @@
+.typeBadge {
+    border-radius: 10px;
+    padding: 3px;
+    width: 80px;
+    display: flex;
+    gap: 5px;
+    color: #fff;
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+}
+
+.typeBadge img {
+    width: 20px;
+}
+
+.typeButton {
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+    color: #fff;
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.typeButton img {
+    width: 20px;
+}

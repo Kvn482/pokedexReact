@@ -1,29 +1,27 @@
 import { capitalize } from './globals-functions'
-import TypeBadge from './typeBadge';
+import { TypeBadge } from './PokemonTypes';
 import { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDumbbell, faRuler, faMars, faVenus, faM } from '@fortawesome/free-solid-svg-icons';
+import { faDumbbell, faRuler, faMars, faVenus } from '@fortawesome/free-solid-svg-icons';
+import typeData from './Types';
 
 function PokemonCard({ pokemon }) {
     const [isShiny, setIsShiny] = useState(false);
-    const [gender, setGender] = useState("male"); // "male" o "female"
+    const [gender, setGender] = useState("male");
 
-    // Función que devuelve la URL correcta del sprite según sexo y shiny
     const getSprite = () => {
         if (gender === "female") {
             if (isShiny && pokemon.sprites.front_shiny_female) return pokemon.sprites.front_shiny_female;
             if (pokemon.sprites.front_female) return pokemon.sprites.front_female;
-            // fallback si no tiene variante femenina
             return isShiny ? pokemon.sprites.front_shiny : pokemon.sprites.front_default;
         } else {
-            // macho
             return isShiny ? pokemon.sprites.front_shiny : pokemon.sprites.front_default;
         }
     };
 
     return (
-        <article key={pokemon.id} className={`cardType-${pokemon.types[0].type.name}`}>
+        <article key={pokemon.id} className={`cardType-${pokemon.types[0].type.name}`} style={{ background: `linear-gradient(0deg,${typeData[pokemon.types[0].type.name].color} 0%,rgba(5,11,25,1) 45%)` }}>
             <div className="spriteButtons">
                 <div className='genderContainer'>
                     {pokemon.sprites.front_default && (
